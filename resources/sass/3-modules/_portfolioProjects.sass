@@ -1,0 +1,88 @@
+/* CSS for Inverse of Project */
+@mixin isInverseSlide($isInverse)
+    .inner-container
+        box-sizing: border-box
+        height: inherit
+
+    @if $isInverse
+        .inner-container-content
+            transform: rotate3d(0, 1, 0, -20deg)
+            @extend .inner-container
+
+        .inner-container-screenshot
+            transform: rotate3d(0, 1, 0, 20deg)
+            @extend .inner-container
+    @else
+        .inner-container-content
+            transform: rotate3d(0, 1, 0, 20deg)
+            @extend .inner-container
+
+        .inner-container-screenshot
+            transform: rotate3d(0, 1, 0, -20deg)
+            @extend .inner-container
+
+@mixin isInverseProjectColor($isInverse)
+
+
+    @if $isInverse
+        &.projectProject
+            background-color: white
+            color: $lightblue
+    @else
+        &.projectProject
+            background-color: $lightblue
+            color: white
+
+
+@mixin portFolioProject($isInverse)
+
+    .project
+        width: 85%
+        margin: auto
+        font-family: 'Red Hat Display'
+        margin-bottom: 5vh
+
+
+        .outer-container
+            perspective: 3000px
+            height: 100%
+
+
+        @include isInverseSlide($isInverse)
+
+        .projectDescription
+            text-align: justify
+            font-size: 1.5rem
+            padding: 1.5rem
+            color: black
+
+
+        .projectContainer-links
+            display: flex
+            flex-wrap: wrap
+            align-content: space-between
+            height: inherit
+
+            a:hover
+                text-decoration: none
+
+            .projectLinksCard
+                box-sizing: border-box
+                flex-grow: 1
+                width: 100%
+                height: 48%
+                display: flex
+                justify-content: center
+                align-items: center
+
+
+                @include isInverseProjectColor($isInverse)
+
+
+                &.projectGithub
+                    background-color: $darkgrey
+                    color: white
+
+                    .fab
+                        font-size: 4em
+                        color: white

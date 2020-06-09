@@ -1,0 +1,37 @@
+//MediaQueries
+@import 'mediaQueries';
+
+//Gobals
+@import 'globals';
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Red+Hat+Display');
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+@import url('https://fonts.googleapis.com/css?family=Concert+One');
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Bad+Script');
+
+// Variables
+@import 'variables';
+
+//Vuetify
+@import '~vuetify/dist/vuetify.min.css';
+
+//Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+//base Styles
+@import '1-base/base-dir';
+
+//layout Styles
+@import '2-layouts/layouts-dir';
+
+//modules Styles
+@import '3-modules/modules-dir';
+
+////states Styles
+//@import '4-states/states-dir';
+//
+////themes Styles
+//@import '5-themes/themes-dir';

@@ -1,0 +1,105 @@
+@import 'mediaQueries';
+
+
+/*
+Section Spacing
+ */
+
+
+.paddingTopBottom-m{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.paddingTopBottom-l{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.paddingTopBottom-xl{
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.flexAlignItemsCenter {
+    display: flex;
+    align-items:center;
+    justify-content: flex-end;
+}
+
+.flexJustifyContentCenter {
+    display:flex;
+    justify-content: center;
+}
+
+
+
+@mixin flexCenter() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+// Section Column
+@mixin sectionTitleVertical($color) {
+
+    .verticalText-container {
+        display: inline-block;
+        position: absolute;
+        writing-mode: vertical-lr;
+        text-orientation: upright;
+        height: 100%;
+        width: 5%; //increase for mobile.
+        background-color: $color;
+        font-size: 3em;
+        float:left;
+        left: 0px;
+        margin-left: 0px;
+
+
+
+        .verticalText {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+
+        }
+    }
+}
+
+@mixin sectionTitleHorizontal($color){
+
+    .verticalText-container {
+
+        @include flexCenter();
+        position: relative;
+        height: 10vh;
+        width: 100%;
+        background-color: $color;
+        font-size: 3em;
+        text-align: center;
+        padding-top: 15px;
+
+        .verticalText {
+
+        }
+    }
+
+}
+
+@mixin sectionBannerStyle(){
+
+    .sectionBanner h2 {
+        font-weight: bold;
+        text-align: center;
+        font-size: 4em;
+        font-family: serif;
+        color: white;
+        padding: 20px;
+
+        @include mQ(desktop){
+
+            font-size: 5em;
+        }
+    }
+}
