@@ -112,6 +112,9 @@
             margin-bottom: 2em
             font-size: 1.3rem
 
+            @include mQ(desktop)
+                display: none
+
         @include pageHeader('black', $watermelon)
 
 
