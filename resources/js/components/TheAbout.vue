@@ -111,9 +111,10 @@
             text-align: justify
             margin-bottom: 2em
             font-size: 1.3rem
+            display: none
 
             @include mQ(desktop)
-                display: none
+                display: block
 
         @include pageHeader('black', $watermelon)
 
