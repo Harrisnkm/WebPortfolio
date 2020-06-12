@@ -36,7 +36,7 @@
 
                 <template #screenshot>
                     <v-img
-                        src="img/providerSearchProjectImage.svg">
+                        src="img/providerSearchProjectImage.png">
                     </v-img>
                 </template>
             </component>
