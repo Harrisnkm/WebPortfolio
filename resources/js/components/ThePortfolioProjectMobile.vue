@@ -16,8 +16,8 @@
                         color="#F7F7F7"
                     >
                         <div class="projectLinks">
-                            <v-btn class="projectLinksBtn toProjectLink">To Project<i class="fa fa-external-link-alt projectIcon"></i></v-btn>
-                            <v-btn class="projectLinksBtn projectGithub">View Code<i class="fab fa-github-alt projectIcon"></i></v-btn>
+                            <v-btn :href="project" class="projectLinksBtn toProjectLink">To Project<i class="fa fa-external-link-alt projectIcon"></i></v-btn>
+                            <v-btn :href="github" class="projectLinksBtn projectGithub">View Code<i class="fab fa-github-alt projectIcon"></i></v-btn>
                         </div>
                     </v-overlay>
                 </v-fade-transition>
@@ -31,7 +31,9 @@
     export default {
         name: "ThePortfolioProjectMobile",
         props: {
-            color: String
+            color: String,
+            github: String,
+            project: String
         },
         data(){
             return {
@@ -54,6 +56,7 @@
         color: white
 
         .projectLinksBtn
+            display: flex
             width: 50vw
             margin-bottom: 1rem
 
