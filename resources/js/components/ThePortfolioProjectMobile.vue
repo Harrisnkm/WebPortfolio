@@ -4,7 +4,8 @@
             <v-card
                 raised
                 height="100%"
-                width="100vw"
+                width="95vw"
+                style="margin:0 auto 5%"
                 class="portfolioProjectMobile"
             >
                 <slot name="screenshot"></slot>
