@@ -1,10 +1,12 @@
 <template>
 
         <v-navigation-drawer
+            permanent
             fixed
             right
             color="#5D98D8"
             dark
+            width="15%"
         >
 
             <v-list>

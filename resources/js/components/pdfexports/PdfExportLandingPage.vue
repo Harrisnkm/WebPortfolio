@@ -1,6 +1,6 @@
 <template>
     <div class="landingPageContainer">
-        <v-container>
+
         <div>
             <div class="applicationtitle">
                 <h2 class="applicationHeader">PDF Export App</h2>
@@ -19,7 +19,7 @@
                 </div>
             </v-card>
         </div>
-        </v-container>
+
     </div>
 </template>
 
