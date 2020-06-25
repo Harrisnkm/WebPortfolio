@@ -1,6 +1,6 @@
 <template>
     <div class="landingPageContainer">
-        <v-container>
+
         <div>
             <div class="applicationtitle">
                 <h2 class="applicationHeader">PDF Export App</h2>
@@ -8,7 +8,8 @@
 
             <v-card class="instructionsContainer">
                 <div class="instructions">
-                    <h4 class="instructionsHeading">INSTRUCTIONS: </h4>
+                    <h4 class="instructionsHeading">INSTRUCTIONS</h4>
+                    <quick-start></quick-start>
                     <ul class="instructionsList">
                         <li v-for="(item,index) in instructions">{{item}} </li>
                     </ul>
@@ -19,13 +20,17 @@
                 </div>
             </v-card>
         </div>
-        </v-container>
+
     </div>
 </template>
 
 <script>
+    import QuickStart from './PdfExportQuickStart'
+
     export default {
         name: "landingpage",
+        components: { QuickStart
+        },
         data(){
             return {
                 instructions: [
@@ -77,7 +82,7 @@
                 font-size: 3rem
                 letter-spacing: .5rem
                 color: $darkgrey
-                margin-bottom: 8vh
+                margin-bottom: 5%
 
 
 

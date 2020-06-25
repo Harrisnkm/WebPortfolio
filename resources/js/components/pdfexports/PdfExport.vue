@@ -1,61 +1,63 @@
 <template>
     <section class="pdfExport">
 
-        <pdf-export-navigation-drawer @changeform="setForm"></pdf-export-navigation-drawer>
+        <pdf-export-navigation-drawer></pdf-export-navigation-drawer>
 
             <v-content>
-                <!--Landing Page if form is not selected-->
-                <pdf-export-landing-page v-show="!activeForm"></pdf-export-landing-page>
+                <div class="mainSection">
+                    <!--Landing Page if form is not selected-->
+                    <pdf-export-landing-page v-show="!activeForm"></pdf-export-landing-page>
 
-                <!--If form is displayed-->
-                <div v-show="activeForm">
+                    <!--If form is displayed-->
+                    <div v-show="activeForm">
 
 
 
 
-                    <v-row>
-                        <v-col cols="2" class="formActionsNav">
-                            <div class="appName text-center">
-                                PDF Export
-                            </div>
-
-                            <div class="userSelect text-center">
-                                <h2> Select User</h2>
-                                <br>
-                                <v-select
-                                    v-model= "selectedUser"
-                                    :items="users"
-                                    item-text="fullname"
-                                    label="Select User"
-                                    prepend-icon="person"
-                                    @input="setUser"
-                                ></v-select>
-                            </div>
-
-                                <div class="formActionButtons text-center">
-                                    <portal-target name="formButtons"></portal-target>
-
-                                    <pdf-export-add-new-user @useradded="setNewUser"></pdf-export-add-new-user>
+                        <v-row>
+                            <v-col cols="2" class="formActionsNav">
+                                <div class="appName text-center">
+                                    PDF Export
                                 </div>
 
+                                <div class="userSelect text-center">
+                                    <h2> Select User</h2>
+                                    <br>
+                                    <v-select
+                                        v-model= "selectedUser"
+                                        :items="users"
+                                        item-text="fullname"
+                                        label="Select User"
+                                        prepend-icon="person"
+                                        @input="setUser"
+                                    ></v-select>
+                                </div>
+
+                                    <div class="formActionButtons text-center">
+                                        <portal-target name="formButtons"></portal-target>
+
+                                        <pdf-export-add-new-user @useradded="setNewUser"></pdf-export-add-new-user>
+                                    </div>
 
 
-                        </v-col>
 
-                        <!-- PDF form to fill -->
+                            </v-col>
 
-                        <v-col cols="8 mx-auto">
-                            <div class="formfill text-center">
+                            <!-- PDF form to fill -->
 
-                                <component :is="activeForm" :selectedUserData="selectedUserData"></component>
+                            <v-col cols="8" offset="3">
+                                <div class="formfill text-center">
 
-                            </div>
-                        </v-col>
+                                    <component :is="activeForm" :selectedUserData="selectedUserData"></component>
 
-                    </v-row>
+                                </div>
+                            </v-col>
+
+                        </v-row>
 
 
 
+                    </div>
                 </div>
             </v-content>
 
@@ -69,7 +71,9 @@
 </template>
 
 <script>
-
+    /*Vuex store*/
+    import store from '../../store';
+    import { mapState} from 'vuex';
 
     import PdfExportNavigationDrawer from "./PdfExportNavigationDrawer";
     import PdfExportAddNewUser from "./PdfExportAddNewUser";
@@ -79,6 +83,7 @@
 
     export default {
         name: "PdfExport",
+        store,
         props: {
 
         },
@@ -88,13 +93,14 @@
         data(){
             return {
                 selectedUser: '',
-                activeForm: '',
                 selectedUserData: {},
                 users: '',
             }
         },
         computed: {
-
+            ...mapState('pdfExport', {
+                activeForm: state => state.activeForm
+            })
     },
         methods: {
             setUser(value) {
@@ -107,9 +113,7 @@
                     }
                 }
             },
-            setForm(formName) {
-                this.activeForm = formName;
-            },
+
             updateCandidates(newUser ='null') {
                 axios({
                     method: 'GET',
@@ -146,6 +150,9 @@
 
      *
         font-family: 'Red Hat Display'
+
+     .mainSection
+         width: 85%
 
      .appName
          color: $brightblue

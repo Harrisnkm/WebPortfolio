@@ -1,10 +1,12 @@
 <template>
 
         <v-navigation-drawer
+            permanent
             fixed
             right
             color="#5D98D8"
             dark
+            width="15%"
         >
 
             <v-list>
@@ -76,7 +78,8 @@
                             :key="i"
                             @click=""
                         >
-                            <v-list-item-title v-text="name" @click="$emit('changeform',code)"></v-list-item-title>
+
+                            <v-list-item-title v-text="name" @click="setForm(code)"></v-list-item-title>
 
                         </v-list-item>
                     </v-list-group>
@@ -204,6 +207,7 @@
 </template>
 
 <script>
+
     export default {
         name: "pdfExportNavigationDrawer",
         data(){
@@ -244,6 +248,11 @@
                     ],
                 }
             }
+        },
+        methods: {
+           setForm(formName){
+               this.$store.commit('pdfExport/changeActiveForm', {formName: formName})
+           }
         }
     }
 </script>
