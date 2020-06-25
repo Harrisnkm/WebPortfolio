@@ -11,35 +11,36 @@
     },
     "devDependencies": {
         "@mdi/font": "^4.9.95",
-        "axios": "^0.19",
-        "bootstrap": "^4.4.1",
+        "axios": "^0.19.2",
+        "bootstrap": "^4.5.0",
         "cross-env": "^5.1",
         "deepmerge": "^4.2.2",
-        "fibers": "^4.0.2",
-        "jquery": "^3.2",
+        "fibers": "^4.0.3",
+        "jquery": "^3.5.1",
         "laravel-mix": "^4.0.7",
         "lodash": "^4.17.13",
         "material-design-icons-iconfont": "^5.0.1",
-        "popper.js": "^1.12",
+        "popper.js": "^1.16.1",
         "pug": "^2.0.4",
         "resolve-url-loader": "^2.3.1",
-        "sass": "^1.26.2",
+        "sass": "^1.26.8",
         "sass-loader": "^7.3.1",
         "vue": "^2.6.11",
         "vue-template-compiler": "^2.6.10",
-        "vue-waypoint": "^3.2.2"
+        "vue-waypoint": "^3.4.1"
     },
     "dependencies": {
+        "caniuse-lite": "^1.0.30001079",
         "portal-vue": "^2.1.7",
         "rss-parser": "^3.8.0",
         "tippy.js": "^6.2.3",
         "uglify-js": "^3.9.4",
-        "v-currency-field": "^3.0.7",
+        "v-currency-field": "^3.0.10",
         "vee-validate": "^3.3.2",
-        "vue-pdf": "^4.0.8",
-        "vue-router": "^3.1.3",
+        "vue-pdf": "^4.0.11",
+        "vue-router": "^3.3.2",
         "vue-tippy": "^4.4.0",
         "vue2-google-maps": "^0.10.7",
-        "vuetify": "^2.2.15"
+        "vuetify": "^2.2.33"
     }
 }
