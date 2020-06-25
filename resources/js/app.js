@@ -85,6 +85,8 @@ Vue.use(VueGoogleMaps, {
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+
+
 new Vue({
     el: '#app',
     vuetify: new Vuetify({

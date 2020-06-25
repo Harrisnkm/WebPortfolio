@@ -6,7 +6,7 @@
             <v-content>
                 <div class="mainSection">
                     <!--Landing Page if form is not selected-->
-                    <pdf-export-landing-page v-show="!activeForm"></pdf-export-landing-page>
+                    <pdf-export-landing-page v-show="!activeForm" @changeform="setForm"></pdf-export-landing-page>
 
                     <!--If form is displayed-->
                     <div v-show="activeForm">
@@ -71,7 +71,9 @@
 </template>
 
 <script>
-
+    /*Vuex store*/
+    import store from '../../store';
+    import { mapState} from 'vuex';
 
     import PdfExportNavigationDrawer from "./PdfExportNavigationDrawer";
     import PdfExportAddNewUser from "./PdfExportAddNewUser";
@@ -81,6 +83,7 @@
 
     export default {
         name: "PdfExport",
+        store,
         props: {
 
         },
@@ -90,13 +93,14 @@
         data(){
             return {
                 selectedUser: '',
-                activeForm: '',
                 selectedUserData: {},
                 users: '',
             }
         },
         computed: {
-
+            ...mapState('pdfExport', {
+                activeForm: state => state.activeForm
+            })
     },
         methods: {
             setUser(value) {
@@ -110,7 +114,7 @@
                 }
             },
             setForm(formName) {
-                this.activeForm = formName;
+                //this.activeForm = formName;
             },
             updateCandidates(newUser ='null') {
                 axios({
@@ -138,6 +142,7 @@
         },
         created() {
            this.users = this.updateCandidates();
+            console.log(this.$store.state.pdfExport.count)
         }
     }
 
