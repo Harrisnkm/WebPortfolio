@@ -1,12 +1,12 @@
 <template>
     <section class="pdfExport">
 
-        <pdf-export-navigation-drawer @changeform="setForm"></pdf-export-navigation-drawer>
+        <pdf-export-navigation-drawer></pdf-export-navigation-drawer>
 
             <v-content>
                 <div class="mainSection">
                     <!--Landing Page if form is not selected-->
-                    <pdf-export-landing-page v-show="!activeForm" @changeform="setForm"></pdf-export-landing-page>
+                    <pdf-export-landing-page v-show="!activeForm"></pdf-export-landing-page>
 
                     <!--If form is displayed-->
                     <div v-show="activeForm">
@@ -113,9 +113,7 @@
                     }
                 }
             },
-            setForm(formName) {
-                //this.activeForm = formName;
-            },
+
             updateCandidates(newUser ='null') {
                 axios({
                     method: 'GET',
@@ -142,7 +140,6 @@
         },
         created() {
            this.users = this.updateCandidates();
-            console.log(this.$store.state.pdfExport.count)
         }
     }
 
