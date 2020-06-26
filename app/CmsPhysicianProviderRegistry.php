@@ -47,7 +47,7 @@ class CmsPhysicianProviderRegistry extends Model
 
         $query = $query->leftJoin('cms_physician_individual_mips_score','a.NPI','=','cms_physician_individual_mips_score.NPI');
 
-           return $query->get();
+           return $query->where('final_MIPS_score', '!=', '0')->limit(30)->get();
 
     }
 
@@ -74,7 +74,7 @@ class CmsPhysicianProviderRegistry extends Model
 
     //Get providers by zip code
     public function getProvidersByZip($query, $zip){
-        $providersByZip = $query->where('zip', 'like', $zip.'%');
+        $providersByZip = $query->where('zip', 'like', substr($zip, 0,4).'%');
         return $providersByZip;
     }
 
