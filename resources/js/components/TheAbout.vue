@@ -5,7 +5,8 @@
         </div>
 
         <div class="summary">
-            Full stack developer specializing in Healthcare SaaS applications. Writes scalable software that prioritizes business value and user experience.  System Administration and Project Management experience included. Knowledgeable in HIPAA best practices, interoperability and industry standards.
+            <h2 class="summaryGreeting"> Hi, I'm Harry. Nice to meet you! </h2>
+            I am a Full Stack developer who loves learning what makes businesses tick. Figuring out an industry’s pain points and creating technical solutions is what I do best. I am naturally curious, an excellent collaborator and am constantly thinking of ways to optimize processes and decrease administrative burden. See my <a href="/resume" target="_blank" class="resumeLink">resume</a> to learn more about me!
         </div>
 
         <v-container>
@@ -116,6 +117,19 @@
             @include mQ(desktop)
                 display: block
 
+            .summaryGreeting
+                font-weight: bold
+                font-size: 2em
+                margin-bottom: 1.5em
+                text-align: center
+                color: $royalblue
+
+
+            .resumeLink
+                text-decoration: none
+
+
+
         @include pageHeader('black', $watermelon)
 
 
@@ -127,6 +141,7 @@
             font-family: 'Red Hat Display'
             font-size: 1.2em
             padding: 1em
+
 
             @include mQ(desktop)
                 font-size: 2.5em
@@ -140,7 +155,7 @@
 
 
             .skillHeading
-                margin-bottom: 1.5em
+                margin-bottom: 2em
 
 
             .skillName
