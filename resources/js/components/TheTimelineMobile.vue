@@ -2,7 +2,7 @@
         <v-container>
             <div class="journeyTimelineItems">
 
-               <v-card shaped class="timelineCard" v-for="item in timelineItems" :key="item.title">
+               <v-card flat class="timelineCard" v-for="item in timelineItems" :key="item.title">
                    <h4 class="timelineYear" :style="`color:${item.color}`">{{item.year}}</h4>
                    <h4 class="timelineTitle" :style="`color:${item.color}`">{{item.title}}</h4>
                   <p class="timelineText">

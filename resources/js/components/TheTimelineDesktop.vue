@@ -66,7 +66,6 @@
 
         .timelineCard
             text-align: center
-            border: 1px solid black
             max-height: 30vw
             min-width: 30%
             padding: 2rem
