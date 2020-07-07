@@ -13,9 +13,9 @@
                         </a>
                     </div>
                     <div>
-                        <a href="https://stackoverflow.com/users/12574425/hrskim" target="_blank">
-                            <i class="fab fa-stack-overflow"></i>
-                        </a>
+                        <the-footer-contact-form>
+                            <i class="fa fa-envelope-o"></i>
+                        </the-footer-contact-form>
                     </div>
                 </div>
 
@@ -30,8 +30,12 @@
 </template>
 
 <script>
+    import TheFooterContactForm from "./TheFooterContactForm";
     export default {
-        name: "TheFooter"
+        name: "TheFooter",
+        components: {
+            TheFooterContactForm
+        }
     }
 </script>
 
@@ -60,7 +64,7 @@
                 max-width: 50%
                 margin: auto
 
-    .fab
+    .fab, .fa
         display: inline-block
         color: white
         font-size: 1.5em

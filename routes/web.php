@@ -21,10 +21,12 @@ Route::get('/', function () {
     return view('hsite.index');
 });
 
-
 Route::get('/resume', function () {
     return response()->file('resume.pdf');
 });
+
+Route::post('mail/contactForm', 'MailController@contactForm');
+
 
 
 /*
