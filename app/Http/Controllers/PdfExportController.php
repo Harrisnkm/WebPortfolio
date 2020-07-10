@@ -50,8 +50,8 @@ class PdfExportController extends Controller
 
     public function getUsers(){
 
-        $users = DB::table('pdfexport_users')->get();
-        return $users;
+        $users = new PdfExport();
+        return $users->getUsers();
 
     }
 
