@@ -6,7 +6,7 @@
 
         <div class="summary">
             <h2 class="summaryGreeting"> Hi, I'm Harry. Nice to meet you! </h2>
-            I am a Full Stack developer who loves learning what makes businesses tick. Figuring out an industry’s pain points and creating technical solutions is what I do best. I am naturally curious, an excellent collaborator and am constantly thinking of ways to optimize processes and decrease administrative burden. See my <a href="/resume" target="_blank" class="resumeLink">resume</a> to learn more about me!
+            I am a Full Stack developer who loves learning what makes businesses tick. I excel at creating technical solutions for operational pain points. I am naturally curious, an excellent collaborator and am constantly thinking up ways to decrease administrative burden through process automation.
         </div>
 
         <v-container>
@@ -22,18 +22,18 @@
                     </div>
                 </v-col>
                 <v-col cols="12" md="4" class="skillSection skillWebdev">
-                    <h2 class="skillHeading">Web Development</h2>
+                    <h2 class="skillHeading">Software Development</h2>
 
                     <div class="skillsContainer text-center skillsWebdevContainer">
                         <div v-for="(item,index) in skills.webdev" class="text-center">
                             <!--must use fa instead of fab-->
-                            <i v-if="index == 'MySQL'" :class="`fa fa-${item.icon} webdevSkill`" :style="`color: ${item.color}; display:inline; vertical-align: bottom`"><p class="skillName" style="font-weight: normal">{{index}}</p></i>
+                            <i v-if="index == 'SQL/MongoDB'" :class="`fa fa-${item.icon} webdevSkill`" :style="`color: ${item.color}; display:inline; vertical-align: bottom`"><p class="skillName" style="font-weight: normal">{{index}}</p></i>
                             <i :class="`fab fa-${item.icon} webdevSkill`" :style="`color: ${item.color}`" v-else><p class="skillName">{{index}}</p></i>
                         </div>
                     </div>
                 </v-col>
                 <v-col cols="12" md="4" class="skillSection skillPmUx">
-                    <h2 class="skillHeading">Project Management/UX</h2>
+                    <h2 class="skillHeading">Project Management</h2>
 
                     <div class="skillsContainer">
                         <div v-for="(item,index) in skills.pmux" class="text-center">
@@ -56,27 +56,24 @@
             return {
                 skills: {
                     pmux: {
-                        'Figma': { icon: 'figma',  color: '#F89488'},
+                        'git': { icon:'git-alt', color: '#F05033'},
                         'Jira': { icon: 'jira', color: '#2684FF'},
                         'GitHub': { icon:'github-alt', color: 'black'},
                         'Bitbucket': { icon: 'bitbucket', color: '#205081'},
+                        'Figma': { icon: 'figma',  color: '#F89488'},
                         'Office': { icon:'microsoft', color: '#E87E01'},
                         'Slack': { icon:'slack-hash', color: '#0f7965'}
                     },
                     webdev: {
 
-                        'HTML':{ icon:'html5', color: '#e34f26'},
-                        'CSS':{ icon:'css3-alt', color: '#1680C0'},
+                        'Django': { icon:'python', color: '#FFE262'},
+                        'React': { icon:'react', color: '#5ED3F3'},
                         'Bootstrap': { icon:'bootstrap', color: '#563D7C'},
                         'SaSS': { icon:'sass', color: '#CF649A'},
-                        'PHP': { icon:'php', color: '#8892BF'},
                         'Laravel': { icon:'laravel', color: '#F1513D'},
-                        'JS': { icon:'js', color: '#F5DE19'},
                         'Node': { icon:'node', color: '#73AB63'},
                         'VueJS': { icon:'vuejs', color: '#41B883'},
-                        'MySQL':{ icon:'database', color: '#1B242F'},
-                        'git': { icon:'git-alt', color: '#F05033'}
-
+                        'SQL/MongoDB':{ icon:'database', color: '#1B242F'}
 
                     },
                     sysadmin: {
@@ -86,8 +83,7 @@
                         'Windows': { icon:'windows', color: '#318DC2'},
                         'Linux': { icon:'linux', color: 'black'},
                         'aws': { icon:'aws', color: '#ff9900'},
-                        'Docker': { icon:'docker', color: '#2496ED'},
-
+                        'Docker': { icon:'docker', color: '#2496ED'}
                     }
                 }
             }
@@ -149,8 +145,8 @@
 
                 div
                     width: 100%
-                &.skillsWebdevContainer div
-                    width: 50%
+                //&.skillsWebdevContainer div
+                //    width: 50%
 
 
 

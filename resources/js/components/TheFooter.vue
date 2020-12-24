@@ -3,7 +3,7 @@
 
                 <div class="siteFooterLinks">
                     <div>
-                        <a href="https://www.linkedin.com/in/harrison-kim-34a025a0/" target="_blank">
+                        <a href="https://www.linkedin.com/in/harry-k-a862b733/" target="_blank">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
                     </div>

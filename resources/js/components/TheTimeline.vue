@@ -30,21 +30,21 @@
                         year: '2014',
                         animation: 'rotateInDownLeft',
                         title: 'System Administrator',
-                        text: 'Linux System Administrator for Medical Software Company. Network and Security Management. HL7 Interfaces. Server Provisioning. Application and IT Support. Scripting and Automation.'
+                        text: 'System Administrator for Medical Software Company. Linux Environment. Network and Security Management. HL7 Interfaces. Server Provisioning. Application and IT Support. Scripting and Automation.'
                     },
                     {
                         color: '#1B242F',
                         year: '2017',
                         animation: 'rotateInDownRight',
-                        title: 'Web Developer',
-                        text: 'Web Developer for EHR & Practice Management Software Company. Developed SASS products on HTML/CSS/JS, PHP, MySQL hosted on Ubuntu Linux. UI/UX Design with Figma and Balsamiq. Third Party API. Workflow automation. ASC X12 and HL7 Interfaces. '
+                        title: 'Software Developer',
+                        text: 'Developer for EHR & Practice Management Software Company. Developed web applications on LAMP Stack. Third Party API Integration. Workflow automation. ASC X12 and HL7 Interfaces. '
                     },
                     {
                         color: '#05C2C9',
-                        year: '2019',
+                        year: '2018',
                         animation: 'rotateInDownLeft',
-                        title: 'Operations Manager',
-                        text: 'Operations Manager for Practice Management Software Company. Lead Technical projects and Application Development. Client Relations, Accounts Management and Vendor Management. Client Onboarding. Workflow automation and streamlined processes. '
+                        title: 'Software Developer II',
+                        text: 'Lead Technical projects and Application Development. Refactored applications with Laravel/Vue.js. UI/UX Design with Figma. Agile product development with Jira. Workflow automation and streamlined processes with python.'
                     }
                 ]
             }
